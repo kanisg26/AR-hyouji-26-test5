@@ -148,6 +148,17 @@
       if (decoded) currentPipeData = decoded;
     }
 
+    // 変曲点座標（実測ルート）を読み込む。QR指定がある場合はそちらを優先。
+    if (!qrData && typeof PipeRoute !== 'undefined') {
+      PipeRoute.load('sampledata/route.json').then(route => {
+        if (route) {
+          currentPipeData = PipeRoute.asPipeData(route);
+          console.log('[route] 読込完了',
+            currentPipeData.length + 'mm /', currentPipeData.depth + 'mm深');
+        }
+      });
+    }
+
     scene = new THREE.Scene();
     camera = new THREE.PerspectiveCamera(70, window.innerWidth / window.innerHeight, 0.01, 100);
 
