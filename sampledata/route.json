@@ -1,0 +1,102 @@
+{
+  "version": "1.0",
+  "pipeId": "23222-0006-000001",
+  "title": "デモ配管ルート（サンプル）",
+  "unit": "mm",
+  "datum": "pipe-centerline",
+  "axes": {
+    "x": "横方向（右が正）",
+    "y": "管路の進行方向（前が正）",
+    "z": "鉛直方向（下が負）"
+  },
+  "pipe": {
+    "spec": "VU150",
+    "innerDia_mm": 154,
+    "outerDia_mm": 166,
+    "invertOffsetFromCenter_mm": 77
+  },
+  "extent_mm": {
+    "totalLength": 2708.3,
+    "spanX": 466.7,
+    "spanY": 1927.5,
+    "spanZ": 843.5
+  },
+  "points": [
+    {
+      "label": "A",
+      "x": 0,
+      "y": 0,
+      "z": 0
+    },
+    {
+      "label": "B",
+      "x": 0,
+      "y": 0,
+      "z": -455
+    },
+    {
+      "label": "C",
+      "x": 0,
+      "y": 459.0239,
+      "z": -459.3319
+    },
+    {
+      "label": "D",
+      "x": -426.5174,
+      "y": 912.4992,
+      "z": -463.3784
+    },
+    {
+      "label": "E",
+      "x": -452.607,
+      "y": 1563.3072,
+      "z": -472.1713
+    },
+    {
+      "label": "F",
+      "x": -466.7316,
+      "y": 1927.4922,
+      "z": -843.4626
+    }
+  ],
+  "segments": [
+    {
+      "index": 0,
+      "from": "A",
+      "to": "B",
+      "length": 455
+    },
+    {
+      "index": 1,
+      "from": "B",
+      "to": "C",
+      "length": 459.0443,
+      "gradient_permille": -9.4372,
+      "inclination_deg": -0.5407
+    },
+    {
+      "index": 2,
+      "from": "C",
+      "to": "D",
+      "length": 622.5539,
+      "gradient_permille": -6.5,
+      "inclination_deg": -0.3724
+    },
+    {
+      "index": 3,
+      "from": "D",
+      "to": "E",
+      "length": 651.3901,
+      "gradient_permille": -13.4999,
+      "inclination_deg": -0.7734
+    },
+    {
+      "index": 4,
+      "from": "E",
+      "to": "F",
+      "length": 520.2763,
+      "gradient_permille": -1018.747,
+      "inclination_deg": -45.5321
+    }
+  ]
+}
