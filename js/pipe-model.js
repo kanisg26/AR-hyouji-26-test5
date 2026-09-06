@@ -10,6 +10,11 @@ const PipeModelFactory = {
    * @returns {THREE.Group} パイプモデルグループ
    */
   createPipeAssembly(pipeData, options = {}) {
+    // 折れ線ルートが与えられている場合はそちらを使う
+    if (pipeData && pipeData.route && typeof PipeRoute !== 'undefined') {
+      return PipeRoute.build(pipeData.route, options);
+    }
+
     const group = new THREE.Group();
     group.userData = { pipeData };
 
